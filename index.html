@@ -18,9 +18,9 @@
     /* 👉 Task 3- Target the element with id headerTop.
     Apply white color to the text, some padding using px or rem units, and a dark background color. */
     #headertop {
-      text-color: white
-      text-background: grey
-      padding: 30px
+      solid-color: blue
+      text-background: pink
+      padding: .5rem
     }
     /* 👉 Task 4- Target the divs that are directly nested underneath the id headerTop.
     Make them display as inline block, instead of block.
@@ -37,13 +37,12 @@
     /* 👉 Task 6- Target the first span nested inside the element with id headerTop.
     Make it have a font weight of bold, and transform the text to uppercase. */
     logo {
-      font-weight: bold
-      text-transform: uppercase
+      text-transform:bold uppercase 
     }
     /* 👉 Task 7- Target the id headerBottom.
     Give it a bottom border of 1 pixel, solid gray, and a little bit of padding using px or rem units. */
     #headerbottom {
-  bottom-border: 1px, solid grey
+  bottom-border: 1px, solid rgba(242, 230, 230, 0.805)
   padding: .5rem
   
 }
@@ -63,24 +62,46 @@
       color: red
       background: black
       font-weight: bold
-      margin: right
-      border-radious: .4rem
+      margin-right: .5rem
+      border: none
+      
     }
     /* 👉 Task 10- Research how to remove all the default styling of button elements.
     Target the button elements inside the element with id headerBottom.
     Remove all their styling, give them a bit of margin to the right, and a cursor of pointer. */
-
+    #headerBottom button {
+      margin-right: auto
+      padding: 0 
+      border: none
+      background: none
+      curser: pointer      ;
+    }
     /* 👉 Task 11- Target the button element inside the id headerBottom that has a class of active
     Make the font weight be bolder, and add a bottom border of 2 pixels solid color (you choose the color).
     Add the class name to the "All mail" button. */
+      #headerBottom-button.active {
+        border-bottom: 2px; solid: red
+        font-weight: bold
+        class-name: "All mail"
+
+      }
 
     /* 👉 Task 12- Target all divs directly nested inside elements with a class of email,
     and make them display as inline-block elements.
     This will make each email render all its details in the same line*/
+      .emails > div {
+        display: inline-block;
 
+      }
     /* 👉 Task 13- Target the elements with a class of email.
     Give them some padding, bigger padding to the left, and a bottom border of very light grey. */
+      #email {
+        padding: 1rem
+        padding: left 1.5px; 
+        border-bottom: 1px solid: gre3
 
+
+      }
     /* 👉 Task 14- Target each div inside the element with a class of email.
     Make the email author and the email subject take 35% of the width of the parent element.
     Make the check, the date and the size take up 8% of the width of the parent element.
@@ -117,17 +138,17 @@
           }
           <span>Jess</span>
         </div>
-        <div class= "inline-container">
+        <div class= "inline container">
           <input type="text" placeholder="Search Mail" />
         </div>
       </div>
       <div id="headerBottom">
-        <div>Compose</div>
+        <div class="blue btn">Compose</div>
         <div>
-          <button>All mail</button>
-          <button>Unread</button>
-          <button>Pinned</button>
-          <button>VIPs</button>
+          <button class="active">All mail</button>
+          <button class="active">Unread</button>
+          <button class="active">Pinned</button>
+          <button class="active">VIPs</button>
         </div>
       </div>
     </header>
