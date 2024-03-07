@@ -5,38 +5,67 @@
   <meta charset="UTF-8">
   <style>
     /* 👉 Task 1- Apply the reset found on this page: https://www.joshwcomeau.com/css/custom-css-reset/ */
-
+    <link rel= "stylesheet" hrefs="https://www.joshwcomeau.com/css/custom-css-reset/
+  */">
   </style>
   <style>
     /* 👉 Task 2- Target the body element.
     Apply a font family of Arial to the body element.
     The font property is inherited by descendant (nested) elements. */
-
+    body {
+      font-family: Arial, helvetica, sans-serif
+    }
     /* 👉 Task 3- Target the element with id headerTop.
     Apply white color to the text, some padding using px or rem units, and a dark background color. */
-
+    #headertop {
+      text-color: white
+      text-background: grey
+      padding: 30px
+    }
     /* 👉 Task 4- Target the divs that are directly nested underneath the id headerTop.
     Make them display as inline block, instead of block.
     This will make them render on the same line. */
-
+    .inline-container {
+      font-style: inline-block
+    }
     /* 👉 Task 5- Target the spans that are nested inside the id headerTop.
     Make them have some margin on the right.
     This will prevent the spans from crashing against one another. */
-
+    #headertop span {
+      margin-right: .5px
+    }
     /* 👉 Task 6- Target the first span nested inside the element with id headerTop.
     Make it have a font weight of bold, and transform the text to uppercase. */
-
+    logo {
+      font-weight: bold
+      text-transform: uppercase
+    }
     /* 👉 Task 7- Target the id headerBottom.
     Give it a bottom border of 1 pixel, solid gray, and a little bit of padding using px or rem units. */
-
+    #headerbottom {
+  bottom-border: 1px, solid grey
+  padding: .5rem
+  
+}
     /* 👉 Task 8- Target the divs that are nested directly inside the element with id headerBottom.
     Make them display as inline block, instead of block.
     This will cause them to render on the same line.
     You can consolidate this rule with the one on step. 4 */
-
+    #headerbottom>div {
+      font-style: inline
+      padding: .6rem
+    }
     /* 👉 Task 9- Target the "Compose" button, although note it's a div instead an actual button.
     Give it color, bold text, background, padding, border radius, margin right, and a cursor of pointer. */
-
+    #compose {
+    font-style: inline block
+      padding: .7rem
+      color: red
+      background: black
+      font-weight: bold
+      margin: right
+      border-radious: .4rem
+    }
     /* 👉 Task 10- Research how to remove all the default styling of button elements.
     Target the button elements inside the element with id headerBottom.
     Remove all their styling, give them a bit of margin to the right, and a cursor of pointer. */
@@ -64,6 +93,9 @@
 
   </style>
   <title>Document</title>
+  <link rel= "stylesheet" hrefs="https://www.joshwcomeau.com/css/custom-css-reset/
+  */">
+  
 </head>
 
 <body>
@@ -77,11 +109,15 @@
   <div>
     <header>
       <div id="headerTop">
-        <div>
-          <span>Super Mail</span>
+        
+        <div class= "inline-container">
+          <span class= "logo">Super Mail</span>
+          span {
+            font-weight: bold
+          }
           <span>Jess</span>
         </div>
-        <div>
+        <div class= "inline-container">
           <input type="text" placeholder="Search Mail" />
         </div>
       </div>
